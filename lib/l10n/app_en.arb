@@ -2,5 +2,73 @@
     "appTitle": "Firebase Services",
     "@appTitle": {
         "description": "title for app"
+    },
+    "chatPageTitle": "Chat",
+    "@chatPageTitle": {
+        "description": "title for chat page"
+    },
+    "authPageTitle": "Login ...",
+    "@authPageTitle": {
+        "description": "title for auth page"
+    },
+    "listItemText": "List Item ...",
+    "@listItemText": {
+        "description": "text for list item"
+    },
+    "noData": "No data ...",
+    "@noData": {
+        "description": "text for no data"
+    },
+    "emailAddressLabel": "Email Address",
+    "@emailAddressLabel": {
+        "description": "label for input field email address"
+    },
+    "userNameLabel": "Username",
+    "@userNameLabel": {
+        "description": "label for input field user name"
+    },
+    "passwordLabel": "Password",
+    "@passwordLabel": {
+        "description": "label for input field password"
+    },
+    "loginButton": "Login",
+    "@loginButton": {
+        "description": "caption for button login"
+    },
+    "signupButton": "Register",
+    "@signupButton": {
+        "description": "caption for button signup"
+    },
+    "logoutButton": "Logout",
+    "@logoutButton": {
+        "description": "caption for button logout"
+    },
+    "errorInvalidEmailAddress": "Invalid email address.",
+    "@errorInvalidEmailAddress": {
+        "description": "text for error invalid email address"
+    },
+    "errorInvalidUsername": "Invalid username.",
+    "@errorInvalidUsername": {
+        "description": "text for error invalid username"
+    },
+    "errorPasswordTooShort": "Password must be at least 7 charecters long.",
+    "@errorPasswordTooShort": {
+        "description": "text for error password too short"
+    },
+    "errorPickImage": "Please pick an image.",
+    "@errorPickImage": {
+        "description": "text for error pick image"
+    },
+    "messageLabel": "Send a message ...",
+    "@messageLabel": {
+        "description": "label for message input field"
+    },
+    "loadingText": "Loading ...",
+    "@loadingText": {
+        "description": "text for loading status"
+    },
+    "addImageButton": "Add Image",
+    "@addImageButton": {
+        "description": "caption for add image button"
     }
 }

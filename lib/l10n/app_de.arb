@@ -1,3 +1,20 @@
 {
-    "appTitle": "Firebase Services"
+    "appTitle": "Firebase Services",
+    "chatPageTitle": "Unterhaltung",
+    "authPageTitle": "Anmelden ...",
+    "listItemText": "Chateintrag ...",
+    "noData": "Keine Daten ...",
+    "emailAddressLabel": "Emailadresse",
+    "userNameLabel": "Benutzername",
+    "passwordLabel": "Passwort",
+    "loginButton": "Anmelden",
+    "signupButton": "Registrieren",
+    "logoutButton": "Abmelden",
+    "errorInvalidEmailAddress": "Ungültige Emailadresse!",
+    "errorInvalidUsername": "Ungültiger Benutzername.",
+    "errorPasswordTooShort": "Das Passwort muss mindestens 7 Zeichen lang sein.",
+    "errorPickImage": "Bitte machen Sie ein Foto.",
+    "messageLabel": "Nachricht senden",
+    "loadingText": "Lädt ...",
+    "addImageButton": "Bild hinzufügen"
 }

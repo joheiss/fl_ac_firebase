@@ -1,9 +1,16 @@
 import 'package:ac_firebase/l10n/l10n.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
+import 'pages/auth_page.dart';
+import 'pages/chat_page.dart';
+import 'pages/splash_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(const App());
 }
 
@@ -13,16 +20,36 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = ThemeData(
-      primarySwatch: Colors.lightBlue,
+      primarySwatch: Colors.pink,
+      backgroundColor: Colors.pink,
+      colorScheme: const ColorScheme.dark(
+        secondary: Colors.deepPurple,
+      ),
+      buttonTheme: ButtonTheme.of(context).copyWith(
+        buttonColor: Colors.pink,
+        textTheme: ButtonTextTheme.primary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+      ),
     );
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: theme.copyWith(
-        colorScheme: const ColorScheme.dark(secondary: Colors.black),
-      ),
+      title: 'Flutter Chat',
+      theme: theme,
       supportedLocales: L10n.all,
       localizationsDelegates: L10n.localizationsDelegates,
-      home: const HomePage(title: 'Home Page'),
+      home: StreamBuilder<User?>(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const SplashPage();
+          }
+          if (snapshot.hasData) {
+            return const ChatPage();
+          }
+          return const AuthPage();
+        },
+      ),
     );
   }
 }
